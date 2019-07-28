@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h4> 저녁메뉴 추천</h4>
+    {% if dinner == '치킨' %}
+        <p> 푸라닭 멁자! </p>
+    {% else %}
+        <p> {{dinner}} 먹자</p>
+    {% endif %}
+    
+    {{ dinner }}
+    
+    <hr>
+    {% for item in box %}
+        {{item}}
+    {% endfor %}
+{% endblock %}
